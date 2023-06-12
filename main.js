@@ -81,6 +81,7 @@ searchBtn.addEventListener('click', function (event) {
 });
 
 function renderFavoriteList(favoritesList) {
+  console.log(renderFavoriteList);
   favList.innerHTML = '';
   for (const character of favoritesList) {
     const html = `
@@ -92,8 +93,8 @@ function renderFavoriteList(favoritesList) {
     </div>
   `;
   }
-  /*favList.innerHTML = html;*/
-  return html;
+  favList.innerHTML = html;
+  console.log(html);
 }
 // lee el id del elemento clicado y lo busca en el array
 function handleClick(event) {
@@ -124,42 +125,3 @@ function addClick() {
   console.log(favList);
   renderFavoriteList();
 }
-
-/*function moveCharacterToFavoritesList(characterElement) {
-  const selectedfavoriteslist = document.querySelector('.favorites-list');
-  const selectedCharacterCopy = characterElement.cloneNode(true);
-  const characterId = characterElement.id;
-
-  characterElement.idList.add('favorite-list');
-  characterElement.dataset.originalId = characterId;
-
-  selectedfavoriteslist.appendChild(selectedCharacterCopy);
-
-  const favoritesSection = document.querySelector('.favorites');
-  favoritesSection.classList.remove('favorites');
-}
-
-function removeCharacterFromFavorites(id) {
-  // Si la sección de favoritos está vacía: ocultarla
-  const favoriteCharacters =
-    favoritesSection.querySelectorAll('.favorites-list');
-  if (favoriteCharacters.length === 0) {
-    favoritesList.idList.add('favorites');
-  }
-
-
-function resetListFav(event) {
-  const id = JSON.parse(localStorage.getItem('charactersLS')) || [];
-
-  if (id.includes(id)) {
-    // Si el ID está incluido, se elimina
-    const newIds = id.filter((item) => item !== id);
-    localStorage.setItem('charactersLS', JSON.stringify(newId));
-  } else {
-    // Si el ID no está incluido, se agrega
-    id.push(id);
-    localStorage.setItem('charactersLS', JSON.stringify(id));
-  }
-}*/
-
-//para guardar fav
