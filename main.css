@@ -1,0 +1,113 @@
+
+.hero {
+    height: 250px;
+    background-image: url(./images/castillo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.list {
+    margin-top: 0px;
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.favorites {
+    min-height: 70vh;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 20px;
+    color: pink;
+    font-weight: bold;
+}
+
+
+.input {
+    padding-left: 20px;
+    margin-left: 60px;
+    height: 25px;
+}
+
+
+
+
+.search {
+    width: 100%;
+    background-color:white;
+    border: 1px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+   
+ 
+ 
+}
+
+.Form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 0px 100px;}
+
+
+ .form_label {
+     width: 50%;   }
+
+
+.footer {
+    padding: 100px 0px;
+    text-align: center;
+    background-color:lightseagreen;
+    color: white;
+}
+
+.character-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+
+    
+    margin: 10px;
+}
+.character-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.character-container {
+    display: flex;
+    display: inline-block;
+    margin: 0.5rem;
+ 
+    
+    align-items: center;
+    border: 2px solid pink;
+        
+
+   
+}
+
+
+.character-card {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.character-card img {
+    max-width: 100%;
+}
