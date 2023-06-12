@@ -83,7 +83,7 @@ searchBtn.addEventListener('click', function (event) {
 function renderFavoriteList(favoritesList) {
   favList.innerHTML = '';
   for (const character of favoritesList) {
-    let html += `
+    const html = `
     <div id="characters-container">
       <div class="favorites" id="${character._id}">
         <p class="names"> Name: ${character.name}</p>
@@ -92,7 +92,8 @@ function renderFavoriteList(favoritesList) {
     </div>
   `;
   }
-  favList.innerHTML = html;
+  /*favList.innerHTML = html;*/
+  return html;
 }
 // lee el id del elemento clicado y lo busca en el array
 function handleClick(event) {
@@ -118,8 +119,11 @@ function addClick() {
   for (const item of list) {
     item.addEventListener('click', handleClick);
   }
+
+  localStorage.setItem('characters', JSON.stringify(favList));
+  console.log(favList);
+  renderFavoriteList();
 }
-function resetListFav=[]
 
 /*function moveCharacterToFavoritesList(characterElement) {
   const selectedfavoriteslist = document.querySelector('.favorites-list');
@@ -142,9 +146,9 @@ function removeCharacterFromFavorites(id) {
   if (favoriteCharacters.length === 0) {
     favoritesList.idList.add('favorites');
   }
-}*/
 
-function addRemoveIdIntoLocalStorage(id) {
+
+function resetListFav(event) {
   const id = JSON.parse(localStorage.getItem('charactersLS')) || [];
 
   if (id.includes(id)) {
@@ -156,8 +160,6 @@ function addRemoveIdIntoLocalStorage(id) {
     id.push(id);
     localStorage.setItem('charactersLS', JSON.stringify(id));
   }
-}
+}*/
 
-
-
-//para guardar fav 
+//para guardar fav
