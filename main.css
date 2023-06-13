@@ -19,13 +19,7 @@
 
 
 .favorites {
-   /* min-height: 70vh;
-    display: flex;
-
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 40px;*/
-
+    
     margin-top: 40px;
     padding: 30px 60px;
     display: flex;
@@ -126,3 +120,6 @@
 .character-card img {
     max-width: 100%;
 }
+
+
+
