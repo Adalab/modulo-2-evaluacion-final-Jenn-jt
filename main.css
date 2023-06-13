@@ -8,7 +8,17 @@
     position: relative;
 }
 
-
+.section-search {
+    width: 80%;
+    background-color: white;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-shadow: 0 0 10px #444444;
+    position: absolute;
+    transform: translateY(-40px);}
 
 .list {
     margin-top: 0px;
@@ -71,7 +81,7 @@
     padding: 0px 100px;}
 
 
- .form_label {
+ .form{
      width: 50%;   }
 
 
@@ -101,11 +111,9 @@
     display: flex;
     display: inline-block;
     margin: 0.5rem;
- 
-    
     align-items: center;
     border: 2px solid pink;
-        
+    box-shadow: 0 0 10px #444444;
 
    
 }
@@ -123,3 +131,8 @@
 
 
 
+.character{
+    font-size: 15px;
+    color: palevioletred;
+    font-weight: bold
+}

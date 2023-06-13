@@ -11,16 +11,28 @@ console.log('>> Ready :)');
 
 let disneyList = [];
 let favoritesList = [];
-const charactersList = JSON.parse(localStorage.getItem('characters'));
 
 //cojo los valores del localstorage y si existe lo guardo en favoritelist getitem
 const url = 'https://dev.adalab.es/api/disney?pageSize=15';
-const charactersLS = localStorage.getItem('characters');
+
 const list = document.querySelector('.list');
 const favList = document.querySelector('#favorites-list');
 const charactersContainer = document.getElementById('list');
 const characterImage = document.createElement('img');
 const characterName = document.createElement('h2');
+
+const favoriteLs = JSON.parse(localStorage.getItem('favoriteslist'));
+addRemoveIdIntoLocalStorage();
+
+function addRemoveIdIntoLocalStorage() {
+  if (favoriteLs) {
+    favoritesList = favoriteLs;
+    renderFavoriteList(favoritesList);
+  }
+}
+
+/*function addRemoveIdIntoLocalStorage(id) {
+  localStorage.setItem('characters', JSON.stringify(favoritesList));*/
 
 function renderdisneyList(disneyList) {
   list.innerHTML += `<li id="${disneyList._id}" class="list">
@@ -98,6 +110,7 @@ function renderFavoriteList(favoritesList) {
     favList.innerHTML = html;
   }
 }
+
 // lee el id del elemento clicado y lo busca en el array
 function handleClick(event) {
   event.preventDefault();
@@ -109,12 +122,15 @@ function handleClick(event) {
     //event.currentTarget.classList.add('favorites');
     // Mover el personaje al contenedor de favoritos
   } else {
-    favoritesList.splice(indexFavorites, 1);
+    favoritesList.splice(indexCharacter, 1);
     //event.currentTarget.classList.remove('favorites');
     // Eliminar el personaje del contenedor de favoritos
   }
+
+  localStorage.setItem('favoriteslist', JSON.stringify(favoritesList));
   renderFavoriteList(favoritesList);
-  addRemoveIdIntoLocalStorage(favoritesList);
+
+  //volver a guardar el array de favoritos en el local storage
 }
 // recorre el array de los personajes y le añade el evento click
 function addClick() {
@@ -122,8 +138,4 @@ function addClick() {
   for (const item of list) {
     item.addEventListener('click', handleClick);
   }
-}
-
-function addRemoveIdIntoLocalStorage(id) {
-  localStorage.setItem('characters', JSON.stringify(favoritesList));
 }
