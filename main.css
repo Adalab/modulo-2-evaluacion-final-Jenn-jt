@@ -20,14 +20,6 @@
     position: absolute;
     transform: translateY(-40px);}
 
-.list {
-    margin-top: 0px;
-    padding: 50px 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
 .favorites {
     
     margin-top: 40px;
@@ -51,15 +43,11 @@
     font-weight: bold;
 }
 
-
 .input {
     padding-left: 20px;
     margin-left: 60px;
     height: 25px;
 }
-
-
-
 
 .search {
     width: 100%;
@@ -70,8 +58,6 @@
     justify-content: center;
     height: 100px;
    
- 
- 
 }
 
 .Form {
@@ -96,9 +82,6 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    
-
-    
     margin: 10px;
 }
 .character-name {
@@ -112,24 +95,11 @@
     display: inline-block;
     margin: 0.5rem;
     align-items: center;
-    border: 2px solid pink;
+    border: px solid cyan;
     box-shadow: 0 0 10px #444444;
 
    
 }
-
-
-.character-card {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-
-.character-card img {
-    max-width: 100%;
-}
-
-
 
 .character{
     font-size: 15px;
